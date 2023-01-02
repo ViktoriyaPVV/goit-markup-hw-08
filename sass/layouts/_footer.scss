@@ -1,0 +1,157 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-color-footer);
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+    }
+    @include desktop {
+      text-align: left;
+      flex-wrap: nowrap;
+    }
+  }
+}
+.nav-adrdress {
+  margin-bottom: 60px;
+}
+
+.studio__color--white {
+  color: var(--footer-logo-studio);
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  line-height: 1.71;
+  color: var(--footer-tel-color);
+  transition: color var(--transform);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.address {
+  font-style: normal;
+}
+
+.footer-soc {
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 0;
+    margin-left: 165px;
+  }
+  @include desktop {
+    margin-left: 60px;
+  }
+}
+.footer-soc__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--footer-text-color);
+}
+
+.footer-soc__link {
+  background-color: var(--background-icon-soc-footer);
+  color: var(--color-icon-soc-footer);
+}
+
+.join__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--footer-text-color);
+}
+.join__form {
+  @include desktop {
+    display: flex;
+  }
+}
+.join {
+  // @media screen and (max-width: 479px) {
+  //   width: 100%;
+  // }
+  @include desktop {
+    margin-left: 60px;
+  }
+}
+.join__input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 15px 16px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  @include mobile {
+    width: 450px;
+  }
+  @include desktop {
+    margin-right: 12px;
+    margin-bottom: 0;
+    width: 358px;
+  }
+}
+
+.join__btn {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  gap: 10px;
+  color: #ffffff;
+}
+.send__icon {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+.nav-soc {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    gap: 165px;
+    flex-direction: row;
+  }
+  @include desktop {
+    flex-direction: row;
+    gap: 60px;
+  }
+}

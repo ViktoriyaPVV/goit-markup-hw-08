@@ -1,0 +1,35 @@
+
+.client__list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.client__item {
+  width: calc((100% - 30px) / 2);
+  height: 92px;
+  @include tablet {
+    width: calc((100% - 60px)/3);
+  }
+  @include desktop {
+    width: calc((100% - 150px)/6);
+  }
+}
+.client__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color-client);
+  border-radius: 4px;
+  color: var(--color-icon-logo);
+  transition: border var(--transform), color var(--transform);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+.client__logo {
+  fill: currentColor;
+}
